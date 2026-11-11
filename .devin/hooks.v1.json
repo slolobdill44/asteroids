@@ -1,0 +1,55 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 -c \"import sys,json,time,os;open('/tmp/repohook_v1.jsonl','a').write(json.dumps({'event':'PreToolUse','t':time.time(),'rl_env':sorted(k for k in os.environ if k.startswith('RL_')),'payload':json.load(sys.stdin)})+chr(10))\"",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 -c \"import sys,json,time,os;open('/tmp/repohook_v1.jsonl','a').write(json.dumps({'event':'PostToolUse','t':time.time(),'rl_env':sorted(k for k in os.environ if k.startswith('RL_')),'payload':json.load(sys.stdin)})+chr(10))\"",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 -c \"import sys,json,time,os;open('/tmp/repohook_v1.jsonl','a').write(json.dumps({'event':'UserPromptSubmit','t':time.time(),'rl_env':sorted(k for k in os.environ if k.startswith('RL_')),'payload':json.load(sys.stdin)})+chr(10))\"",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "SessionStart": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 -c \"import sys,json,time,os;open('/tmp/repohook_v1.jsonl','a').write(json.dumps({'event':'SessionStart','t':time.time(),'rl_env':sorted(k for k in os.environ if k.startswith('RL_')),'payload':json.load(sys.stdin)})+chr(10))\"",
+          "timeout": 10
+        },
+        {
+          "type": "command",
+          "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"Hook test C9b: the second codeword is HERON.\"}}'",
+          "timeout": 10
+        }
+      ]
+    }
+  ]
+}
