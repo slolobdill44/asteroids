@@ -5,7 +5,6 @@
       "url": "https://github.com/slolobdill44/asteroids.git",
       "path": "plugins/rl-env-repo",
       "env": {
-        "RL_REPO": "secret:repo:slolobdill44/asteroids:RL_REPO_KEY",
         "RL_ORG": "secret:org:RL_TEST_KEY",
         "RL_PERSONAL": "secret:personal:RL_TEST_KEY_P",
         "RL_LITERAL": "literal-repo"
