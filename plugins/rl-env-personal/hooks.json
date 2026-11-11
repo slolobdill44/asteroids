@@ -1,0 +1,98 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" PreToolUse",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" PostToolUse",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "PermissionRequest": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" PermissionRequest",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" UserPromptSubmit",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" Stop",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "PostCompaction": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" PostCompaction",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "SessionStart": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" SessionStart",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "SessionEnd": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 \"$DEVIN_PLUGIN_ROOT/hooklog.py\" SessionEnd",
+          "timeout": 10
+        }
+      ]
+    }
+  ]
+}
